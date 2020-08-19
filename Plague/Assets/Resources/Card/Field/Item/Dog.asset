@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55d08278f2eee649924625af6ed4083, type: 3}
+  m_Name: Dog
+  m_EditorClassIdentifier: 
+  cardName: "\uC57C\uC0DD \uAC1C \uC870\uC6B0"
+  cardType: 10
+  sprite: {fileID: 21300000, guid: eb816f6e5323275459cfdf051be61267, type: 3}
+  cardAbility: "\uAC10\uC5FC\uC218\uCE58 +2"
+  gain:
+    Infection_Level_Variation: 2
+    Energy_Change_Volume: 0
+    Infection_Lever_Per: 100
+    Energy_Change_Per: 0
+    GetMedician: 0
+    GetFood: 0
+    MedicionPer: 0
+    FoodPer: 0
+  pain:
+    Infection_Level_Variation: 0
+    Energy_Change_Volume: 0
+    Infection_Lever_Per: 0
+    Energy_Change_Per: 0
+    CardDispotal: 0
+  icon: {fileID: 21300000, guid: 9911de448f0e14f42a0c8b7473c46f3f, type: 3}
+  PN: 0

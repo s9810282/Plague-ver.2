@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55d08278f2eee649924625af6ed4083, type: 3}
+  m_Name: Thief
+  m_EditorClassIdentifier: 
+  cardName: "\uB3C4\uB451 \uB4F1\uC7A5"
+  cardType: 10
+  sprite: {fileID: 21300000, guid: c32bba0f2f1c3ad45a8d36cf1ce89717, type: 3}
+  cardAbility: "\uB79C\uB364\uCE74\uB4DC 2\uC7A5 \uD3D0\uAE30\n\uC2A4\uD14C\uBBF8\uB098
+    -2"
+  gain:
+    Infection_Level_Variation: 0
+    Energy_Change_Volume: -2
+    Infection_Lever_Per: 0
+    Energy_Change_Per: 100
+    GetMedician: 0
+    GetFood: 0
+    MedicionPer: 0
+    FoodPer: 0
+  pain:
+    Infection_Level_Variation: 0
+    Energy_Change_Volume: 0
+    Infection_Lever_Per: 0
+    Energy_Change_Per: 0
+    CardDispotal: 2
+  icon: {fileID: 21300000, guid: 9911de448f0e14f42a0c8b7473c46f3f, type: 3}
+  PN: 0

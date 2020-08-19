@@ -63,10 +63,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\03.Scripts\IntroManager.cs" />
+    <Compile Include="Assets\03.Scripts\Play\Card\BehaviorCard.cs" />
     <Compile Include="Assets\03.Scripts\Play\Card\Card.cs" />
     <Compile Include="Assets\03.Scripts\Play\Card\CardType.cs" />
-    <Compile Include="Assets\03.Scripts\Play\Card\ItemCard.cs" />
-    <Compile Include="Assets\03.Scripts\Play\Card\PNCard.cs" />
+    <Compile Include="Assets\03.Scripts\Play\Card\SituationCard.cs" />
+    <Compile Include="Assets\03.Scripts\Play\FieldCard.cs" />
+    <Compile Include="Assets\03.Scripts\Play\FieldCardManager.cs" />
+    <Compile Include="Assets\03.Scripts\Play\GameManager.cs" />
+    <Compile Include="Assets\03.Scripts\Play\HandCard.cs" />
+    <Compile Include="Assets\03.Scripts\Play\HandCardManager.cs" />
     <Compile Include="Assets\03.Scripts\TitleManager.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Unity 2019.2.13f1/Plague/Plague/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
