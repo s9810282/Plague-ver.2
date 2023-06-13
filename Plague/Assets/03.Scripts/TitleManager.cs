@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-using DG.Tweening;  
+using DG.Tweening;
 
 public class TitleManager : MonoBehaviour
 {
     [SerializeField] Image fadeImage;
+    [SerializeField] CanvasGroup canvasGroup;
 
     void Awake()
     {
@@ -26,3 +27,5 @@ public class TitleManager : MonoBehaviour
         Application.Quit();
     }
 }
+
+

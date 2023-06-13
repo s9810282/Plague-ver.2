@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 using UnityEngine.EventSystems;
+using System;
 
 public class HandCard : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -21,6 +22,8 @@ public class HandCard : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
 
     private HandCard showSelectCard;
     public HandCard ShowSelctCard { get { return showSelectCard; } set { showSelectCard = value; } }
+
+    float limitYPos = 0f;
 
     bool isShowCard = false;
 
@@ -52,7 +55,14 @@ public class HandCard : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
 
         itemImage.sprite = _Card.sprite;
         itemAbilityText.text = _Card.cardAbility;
+    } //카드 정보 적용
+
+
+    public void SetLimitYPos(float yPos)
+    {
+        limitYPos = yPos;
     }
+
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -61,16 +71,20 @@ public class HandCard : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
 
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("Drag");
         transform.position = eventData.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         transform.position = startpos;
+
+        Debug.Log(eventData.position);
+        Debug.Log(eventData.worldPosition);
+        Debug.Log(gameObject.transform.position);
+        Debug.Log(gameObject.transform.localPosition);
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData) //더블클릭 시 카드 확대
     {
         if (eventData.clickCount >= 2)
         {

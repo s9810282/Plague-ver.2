@@ -21,8 +21,6 @@ public class FieldCardManager : MonoBehaviour
             int dataNum = Random.Range(0, fieldCardDates.Length - 1);
 
             fieldCards[i]._Card = fieldCardDates[dataNum];
-   
-
             fieldCards[i].SetCardData();
         }
     }

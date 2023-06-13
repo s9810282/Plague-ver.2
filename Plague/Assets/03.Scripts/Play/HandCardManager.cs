@@ -12,6 +12,8 @@ public class HandCardManager : MonoBehaviour
 
     [SerializeField] int handCardCount = 0;
 
+    [SerializeField] float handCardLimitY = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,7 @@ public class HandCardManager : MonoBehaviour
 
             handCards[i].ShowSelctCard = showSelectCard;
             handCards[i].SetCardData();
+            handCards[i].SetLimitYPos(handCardLimitY);
 
             handCards[i].gameObject.SetActive(true);          
         }
