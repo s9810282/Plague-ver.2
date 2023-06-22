@@ -18,20 +18,12 @@ public class FieldCard : MonoBehaviour
     private SituationCard card;
     public SituationCard _Card { get { return card; } set { card = value; } }
 
-    Rect rect;
-
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-        
-    }
 
     public void SetCardData()
     {

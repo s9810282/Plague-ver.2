@@ -8,6 +8,8 @@ using System;
 
 public class HandCard : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    [SerializeField] RectTransform handCard;
+
     [SerializeField] Text itemTypeText;
 
     [SerializeField] Text itemNameText;
@@ -16,6 +18,7 @@ public class HandCard : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
 
     [SerializeField] Text itemAbilityText;
 
+    Action<BehaviorCard, bool> cardSetting;
 
     private BehaviorCard card;
     public BehaviorCard _Card { get { return card; } set { card = value; } }
@@ -23,7 +26,7 @@ public class HandCard : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
     private HandCard showSelectCard;
     public HandCard ShowSelctCard { get { return showSelectCard; } set { showSelectCard = value; } }
 
-    float limitYPos = 0f;
+    Transform limitPos;
 
     bool isShowCard = false;
 
@@ -48,19 +51,28 @@ public class HandCard : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
         }
     }
 
-    public void SetCardData()
+    public void SetCardData(Action<BehaviorCard, bool> action = null)
     {
         itemTypeText.text = _Card.cardType.ToString();
         itemNameText.text = _Card.cardName.ToString();
 
         itemImage.sprite = _Card.sprite;
         itemAbilityText.text = _Card.cardAbility;
+
+        if (action != null)
+            cardSetting = action;
+
     } //카드 정보 적용
 
 
-    public void SetLimitYPos(float yPos)
+    public void CardClear()
     {
-        limitYPos = yPos;
+        gameObject.SetActive(false);
+    }
+
+    public void SetLimitPos(Transform pos)
+    {
+        limitPos = pos;
     }
 
 
@@ -76,12 +88,18 @@ public class HandCard : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        transform.position = startpos;
+        if (transform.position.y > limitPos.position.y)
+        {
+            CardClear();
 
-        Debug.Log(eventData.position);
-        Debug.Log(eventData.worldPosition);
-        Debug.Log(gameObject.transform.position);
-        Debug.Log(gameObject.transform.localPosition);
+            if (cardSetting != null)
+                cardSetting.Invoke(card, transform.position.x > limitPos.position.x);
+
+            Debug.Log(transform.position.x);
+            Debug.Log(limitPos.position.x);
+        }
+        else
+            transform.position = startpos;
     }
 
     public void OnPointerClick(PointerEventData eventData) //더블클릭 시 카드 확대

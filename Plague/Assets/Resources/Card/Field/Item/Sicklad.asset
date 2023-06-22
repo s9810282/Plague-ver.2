@@ -15,8 +15,7 @@ MonoBehaviour:
   cardName: "\uAC10\uC5FC\uC790 \uB4F1\uC7A5"
   cardType: 10
   sprite: {fileID: 21300000, guid: b871a0b978bfbe1448177f70e297c1ae, type: 3}
-  cardAbility: "\uB79C\uB364\uCE74\uB4DC \uD55C\uC7A5 \uD3D0\uAE30\n\uAC10\uC5FC\uC218\uCE58
-    +2\n\uC2A4\uD14C\uBBF8\uB098 -2"
+  cardAbility: "\uAC10\uC5FC\uC218\uCE58 +4"
   gain:
     Infection_Level_Variation: 4
     Energy_Change_Volume: 0
