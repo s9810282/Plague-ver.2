@@ -8,6 +8,7 @@ public class Card : ScriptableObject
     public CardType cardType;
 
     public Sprite sprite;
+    public Sprite icon;
 
     [TextArea] public string cardAbility;
     

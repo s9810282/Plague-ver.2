@@ -6,6 +6,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "new BehaviorCard CardData", menuName = "BehaviorCard Card Data", order = 2)]
 public class BehaviorCard : Card
 {
+    public Sprite fieldSprite;
+
     public int Infection_Level_Variation;
     public int Energy_Change_Volume;
 

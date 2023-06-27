@@ -4,8 +4,9 @@ using UnityEngine;
 
 public enum CardType
 {
-    아이템 = 0,
-    긍정부정,
+    FieldItem = 0,
+    FieldPN,
 
-    아이템사용  = 10,
+    HandItem  = 10,
+    HandPN,
 }

@@ -27,11 +27,17 @@ public class FieldBehaviourCard : MonoBehaviour
 
     public void SetCardData()
     {
-        itemTypeText.text = _Card.cardType.ToString();
-        itemNameText.text = _Card.cardName.ToString();
+        itemTypeText.text = card.cardType.ToString();
+        itemNameText.text = card.cardName.ToString();
 
-        itemImage.sprite = _Card.sprite;
+        itemImage.sprite = card.sprite;
+        iconImage.sprite = card.icon;
 
-        itemAbilityText.text = _Card.cardAbility;
+        itemAbilityText.text = card.cardAbility;
+    }
+
+    public void HandToFieldImage()
+    {
+        itemImage.sprite = card.fieldSprite;
     }
 }

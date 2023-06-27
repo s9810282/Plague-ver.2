@@ -15,10 +15,10 @@ public class FieldCardManager : MonoBehaviour
 
     [SerializeField] Sprite trueFalseIcon;
 
-    // Start is called before the first frame update
-    void Start()
+
+    public void GameStart()
     {
-        for(int i = 0; i < 2; i++)
+        for (int i = 0; i < 2; i++)
         {
             int dataNum = Random.Range(0, fieldCardDates.Length - 1);
 
@@ -31,6 +31,7 @@ public class FieldCardManager : MonoBehaviour
     {
         fieldBehaviourCards[0]._Card = behaviorCard;
         fieldBehaviourCards[0].SetCardData();
+        fieldBehaviourCards[0].HandToFieldImage();
         fieldBehaviourCards[0].gameObject.SetActive(true);
     }
 
@@ -38,6 +39,7 @@ public class FieldCardManager : MonoBehaviour
     {
         fieldBehaviourCards[1]._Card = behaviorCard;
         fieldBehaviourCards[1].SetCardData();
+        fieldBehaviourCards[1].HandToFieldImage();
         fieldBehaviourCards[1].gameObject.SetActive(true);
     }
 }

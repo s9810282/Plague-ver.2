@@ -37,8 +37,6 @@ public class HandCard : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         if(isShowCard)

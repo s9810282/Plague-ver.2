@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Gun
   m_EditorClassIdentifier: 
   cardName: "\uAD8C\uCD1D"
-  cardType: 0
+  cardType: 10
   sprite: {fileID: 21300000, guid: e8ec26385ed19c948a68caa00b07bda8, type: 3}
+  icon: {fileID: 21300000, guid: 9911de448f0e14f42a0c8b7473c46f3f, type: 3}
   cardAbility: "\uC804\uCCB4\uC0C1\uD669 \uD6A8\uACFC\uBB34\uC2DC"
+  fieldSprite: {fileID: 21300000, guid: 7441bbb9e9a3c044aa1b76d2d0ad95cd, type: 3}
   Infection_Level_Variation: 0
   Energy_Change_Volume: 0
   Infection_Level_Ignore: 0
   OnlyIgnore: 1
+  PN: 0

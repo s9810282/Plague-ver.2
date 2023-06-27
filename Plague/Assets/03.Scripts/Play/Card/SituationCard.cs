@@ -52,8 +52,6 @@ public class SituationCard : Card
 
     public PNPain pain;
 
-    public Sprite icon;
-
     public bool PN;
 
 }

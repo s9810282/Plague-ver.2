@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Madlad
   m_EditorClassIdentifier: 
   cardName: "\uD3ED\uB3C4 \uB4F1\uC7A5"
-  cardType: 10
+  cardType: 0
   sprite: {fileID: 21300000, guid: fbd4254ed5304e445a00ab380ab29a35, type: 3}
+  icon: {fileID: 21300000, guid: 9911de448f0e14f42a0c8b7473c46f3f, type: 3}
   cardAbility: "\uB79C\uB364\uCE74\uB4DC \uD55C\uC7A5 \uD3D0\uAE30\n\uAC10\uC5FC\uC218\uCE58
     +2\n\uC2A4\uD14C\uBBF8\uB098 -2"
   gain:
     Infection_Level_Variation: 2
-    Energy_Change_Volume: -2
+    Energy_Change_Volume: 0
     Infection_Lever_Per: 100
     Energy_Change_Per: 100
     GetMedician: 0
@@ -28,9 +29,8 @@ MonoBehaviour:
     FoodPer: 0
   pain:
     Infection_Level_Variation: 0
-    Energy_Change_Volume: 0
+    Energy_Change_Volume: 2
     Infection_Lever_Per: 0
     Energy_Change_Per: 0
     CardDispotal: 1
-  icon: {fileID: 21300000, guid: 9911de448f0e14f42a0c8b7473c46f3f, type: 3}
   PN: 0

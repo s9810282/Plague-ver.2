@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: GasMask
   m_EditorClassIdentifier: 
   cardName: "\uBC29\uB3C5\uBA74"
-  cardType: 0
+  cardType: 10
   sprite: {fileID: 21300000, guid: 9c42f633b2a7ec646b1bde6fa363f750, type: 3}
+  icon: {fileID: 21300000, guid: 9911de448f0e14f42a0c8b7473c46f3f, type: 3}
   cardAbility: "\uAC10\uC5FC\uC218\uCE58 \uC99D\uAC00 \uD6A8\uACFC\uBB34\uC2DC"
+  fieldSprite: {fileID: 21300000, guid: 7d75f6078d1fa7241a138f5aee4cc237, type: 3}
   Infection_Level_Variation: 0
   Energy_Change_Volume: 0
   Infection_Level_Ignore: 1
   OnlyIgnore: 0
+  PN: 0

@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Medician
   m_EditorClassIdentifier: 
   cardName: "\uC57D\uD488"
-  cardType: 0
+  cardType: 10
   sprite: {fileID: 21300000, guid: 14b26ed202663444dbe9fce6c8a44658, type: 3}
+  icon: {fileID: 21300000, guid: 9911de448f0e14f42a0c8b7473c46f3f, type: 3}
   cardAbility: "\uAC10\uC5FC\uC218\uCE58 [-5]"
+  fieldSprite: {fileID: 21300000, guid: ab62cee967aa843448d318e861b16755, type: 3}
   Infection_Level_Variation: -5
   Energy_Change_Volume: 0
   Infection_Level_Ignore: 0
   OnlyIgnore: 0
+  PN: 0

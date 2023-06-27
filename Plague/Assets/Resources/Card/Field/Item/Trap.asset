@@ -13,24 +13,24 @@ MonoBehaviour:
   m_Name: Trap
   m_EditorClassIdentifier: 
   cardName: "\uB36B"
-  cardType: 10
+  cardType: 0
   sprite: {fileID: 21300000, guid: 7d582f43539e9f54b929238c2806f29b, type: 3}
+  icon: {fileID: 21300000, guid: 9911de448f0e14f42a0c8b7473c46f3f, type: 3}
   cardAbility: "\uAC04\uD3B8\uC2DD\uD488 \uD68D\uB4DD\n\uAC10\uC5FC\uC218\uCE58 -+1\n\uC2A4\uD14C\uBBF8\uB098
     -5"
   gain:
-    Infection_Level_Variation: 1
-    Energy_Change_Volume: -5
+    Infection_Level_Variation: -1
+    Energy_Change_Volume: 0
     Infection_Lever_Per: 100
-    Energy_Change_Per: 100
+    Energy_Change_Per: 0
     GetMedician: 0
     GetFood: 1
     MedicionPer: 0
     FoodPer: 100
   pain:
     Infection_Level_Variation: 0
-    Energy_Change_Volume: 0
+    Energy_Change_Volume: 5
     Infection_Lever_Per: 0
-    Energy_Change_Per: 0
+    Energy_Change_Per: 100
     CardDispotal: 0
-  icon: {fileID: 21300000, guid: 9911de448f0e14f42a0c8b7473c46f3f, type: 3}
   PN: 0

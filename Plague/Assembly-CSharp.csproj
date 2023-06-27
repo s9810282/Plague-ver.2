@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\03.Scripts\Play\Card\BehaviorCard.cs" />
+    <Compile Include="Assets\03.Scripts\Play\GameData.cs" />
     <Compile Include="Assets\03.Scripts\Play\Card\CardType.cs" />
     <Compile Include="Assets\03.Scripts\Play\HandCard.cs" />
     <Compile Include="Assets\03.Scripts\IntroManager.cs" />
@@ -67,8 +68,8 @@
     <Compile Include="Assets\03.Scripts\TitleManager.cs" />
     <Compile Include="Assets\03.Scripts\Play\FieldCardManager.cs" />
     <Compile Include="Assets\03.Scripts\Play\Card\Card.cs" />
+    <Compile Include="Assets\03.Scripts\Play\CardEventManager.cs" />
     <Compile Include="Assets\03.Scripts\Play\Card\SituationCard.cs" />
-    <Compile Include="Assets\03.Scripts\Play\GameManager.cs" />
     <Compile Include="Assets\03.Scripts\Play\HandCardManager.cs" />
   </ItemGroup>
   <ItemGroup>

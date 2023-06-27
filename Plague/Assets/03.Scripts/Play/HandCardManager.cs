@@ -4,6 +4,20 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
+
+//[System.Serializable]
+//public class CardEvent : ScriptableObject
+//{
+//    public event System.Action<BehaviorCard> OnCardEvent;
+//    public BehaviorCard c;
+
+//    public void PlayCardEvent(BehaviorCard card)
+//    {
+//        if (OnCardEvent != null)
+//            OnCardEvent.Invoke(card);
+//    }
+//}
+
 public class HandCardManager : MonoBehaviour
 {
     public delegate void UAction(BehaviorCard card, bool isZero);
@@ -16,19 +30,17 @@ public class HandCardManager : MonoBehaviour
 
     [SerializeField] int handCardCount = 0;
 
+
     [SerializeField] Transform handCardLimit;
 
-    [Space(30f)]
+    Action<BehaviorCard> leftSetting;
+    Action<BehaviorCard> rightSetting;
 
-    [SerializeField] UnityEvent<BehaviorCard> fieldLeftCardSetting;
-    [SerializeField] UnityEvent<BehaviorCard> fieldRightCardSetting;
+    //[Space(30f)]
 
-    [SerializeField] UAction a;
-
-    // Start is called before the first frame update
-    void Start()
+    public void GameStart()
     {
-        for (int i = 0; i <  handCardCount; i++)
+        for (int i = 0; i < handCardCount; i++)
         {
             handCards[i]._Card = cardsDatas[UnityEngine.Random.Range(0, cardsDatas.Length - 1)];
 
@@ -42,16 +54,19 @@ public class HandCardManager : MonoBehaviour
 
     public void SetFieldBehaviour(BehaviorCard behaviorCard, bool isZero)
     {
-        //유니티 이벤트는 GameObject를 상속하는 종류의 변수만 매개변수로 넘겨줄수 있어서 ScriptableObject인 카드 정보는 안됨
-        //
-        Debug.Log("Setting");
-        Debug.Log(behaviorCard.GetType());
-        Debug.Log(behaviorCard.cardName);
-        Debug.Log(isZero);
-
         if (!isZero)
-            fieldLeftCardSetting.Invoke(behaviorCard);
+            leftSetting.Invoke(behaviorCard);
         else
-            fieldRightCardSetting.Invoke(behaviorCard);
+            rightSetting.Invoke(behaviorCard);
+    }
+
+    public void EventSetting(Action<BehaviorCard> _leftSetting = null, 
+        Action<BehaviorCard> _rightSetting = null)
+    {
+        if (_leftSetting != null)
+            leftSetting = _leftSetting;
+
+        if (_rightSetting != null)
+            rightSetting = _rightSetting;
     }
 }
