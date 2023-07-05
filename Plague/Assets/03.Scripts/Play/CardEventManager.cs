@@ -32,8 +32,12 @@ public class CardEventManager : MonoBehaviour
 
     public void CardSettingEnd()
     {
-
-
+        ClosingFieldCard();
         gameData.CheckEnding();
+    }
+
+    public void ClosingFieldCard()
+    {
+
     }
 }

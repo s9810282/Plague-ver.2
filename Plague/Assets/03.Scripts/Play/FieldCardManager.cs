@@ -42,4 +42,14 @@ public class FieldCardManager : MonoBehaviour
         fieldBehaviourCards[1].HandToFieldImage();
         fieldBehaviourCards[1].gameObject.SetActive(true);
     }
+
+    public FieldCard[] ReturnSituationCards()
+    {
+        return fieldCards;
+    }
+
+    public FieldBehaviourCard[] ReturnFieldBehaviourCards()
+    {
+        return fieldBehaviourCards;
+    }    
 }

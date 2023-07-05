@@ -1,0 +1,44 @@
+Card Type
+- Field Item Card
+  50퍼의 확률로 아이템 효과 획득/비획득
+- Field PN Card
+  긍정/부정 카드로 확정적으로 결과 유도 가능 없을 시 50퍼
+- Hand Item Card
+  걍 획득
+- Hand PN Card
+  
+
+Field
+- Gain
+ 
+    public int Infection_Level_Variation; 감염수치 증가량
+    public int Energy_Change_Volume; 스테미나 증가량
+
+    public int Infection_Lever_Per; 감염수치 증가량이 적용될 확률
+    public int Energy_Change_Per; 스테미나 증가량이 적용될 확률
+
+    public bool GetMedician; 약을 얻는가의 여부
+    public bool GetFood; 간편식품을 얻는가의 여부
+
+    public int MedicionPer; 약을 얻을 확률
+    public int FoodPer; 음식을 얻을 확률
+
+- Pain
+    public int Infection_Level_Variation; 감염수치 감소량
+    public int Energy_Change_Volume; 스테미나 감소량 
+
+    public int Infection_Lever_Per;
+    public int Energy_Change_Per;
+
+    public int CardDispotal; 카드 소실 장수"
+
+
+Hand
+
+    public int Infection_Level_Variation; 감염수치 변화량
+    public int Energy_Change_Volume; 스테미나 변화량
+
+    public bool Infection_Level_Ignore; 감염수치 변화량 무시 여부
+    public bool OnlyIgnore; 모든 상황효과 무시 여부
+
+    public bool PN;  긍정 / 부정
