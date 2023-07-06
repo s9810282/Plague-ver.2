@@ -52,6 +52,13 @@ public class HandCardManager : MonoBehaviour
         }
     }
 
+    public void RoundStart()
+    {
+
+    }
+
+
+    //HandCard Event
     public void SetFieldBehaviour(BehaviorCard behaviorCard, bool isZero)
     {
         if (!isZero)
@@ -59,7 +66,6 @@ public class HandCardManager : MonoBehaviour
         else
             rightSetting.Invoke(behaviorCard);
     }
-
     public void EventSetting(Action<BehaviorCard> _leftSetting = null, 
         Action<BehaviorCard> _rightSetting = null)
     {
@@ -68,5 +74,22 @@ public class HandCardManager : MonoBehaviour
 
         if (_rightSetting != null)
             rightSetting = _rightSetting;
+    }
+
+
+
+    public void AddCard(int type)
+    {
+        //0 == Food, 1 == Medician
+
+    }
+
+    public void CardDisPotal(int count)
+    {
+        if (count == 0)
+            return;
+
+
+
     }
 }

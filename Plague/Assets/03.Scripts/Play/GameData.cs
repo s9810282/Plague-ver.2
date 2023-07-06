@@ -11,6 +11,9 @@ public class GameData : ScriptableObject
 
     [SerializeField] int days = 0;
 
+    public int Infection_Level { get => infection_Level; set => infection_Level = value; }
+    public int Energy { get => energy; set => energy = value; }
+    public int Days { get => days; set => days = value; }
 
     public void CheckEnding()
     {

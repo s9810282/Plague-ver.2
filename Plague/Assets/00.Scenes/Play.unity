@@ -2145,6 +2145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fieldCardManager: {fileID: 575360035}
   handCardManager: {fileID: 816557179}
+  gameData: {fileID: 0}
 --- !u!1 &1568083722
 GameObject:
   m_ObjectHideFlags: 0

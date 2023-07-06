@@ -15,6 +15,7 @@ MonoBehaviour:
   cardName: "\uD328\uAC70\uB9AC\uD55C\uD14C \uB9D0\uAC78\uAE30"
   cardType: 1
   sprite: {fileID: 21300000, guid: 18762a82f4da87148b47f210c3f877fb, type: 3}
+  icon: {fileID: 21300000, guid: 7f8d32be4335e5e45b2174377a97e1c6, type: 3}
   cardAbility: "3% \uAC04\uD3B8\uC2DD\uD488\n97% \uAC10\uC5FC\uC218\uCE58 +1\n97%
     \uC2A4\uD14C\uBBF8\uB098 -3"
   gain:
@@ -25,12 +26,11 @@ MonoBehaviour:
     GetMedician: 1
     GetFood: 1
     MedicionPer: 1
-    FoodPer: 1
+    FoodPer: 3
   pain:
     Infection_Level_Variation: 1
     Energy_Change_Volume: -3
     Infection_Lever_Per: 99
     Energy_Change_Per: 99
     CardDispotal: 0
-  icon: {fileID: 21300000, guid: 7f8d32be4335e5e45b2174377a97e1c6, type: 3}
   PN: 1
