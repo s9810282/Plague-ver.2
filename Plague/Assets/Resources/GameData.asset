@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f781f20dc2deca4180e1467ed5f7501, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
+  infection_Level: 0
+  energy: 10
+  days: 1
