@@ -23,14 +23,14 @@ MonoBehaviour:
     Energy_Change_Volume: 0
     Infection_Lever_Per: 0
     Energy_Change_Per: 0
-    GetMedician: 1
+    GetMedician: 0
     GetFood: 1
-    MedicionPer: 1
+    MedicionPer: 0
     FoodPer: 3
   pain:
     Infection_Level_Variation: 1
-    Energy_Change_Volume: -3
-    Infection_Lever_Per: 99
-    Energy_Change_Per: 99
+    Energy_Change_Volume: 3
+    Infection_Lever_Per: 97
+    Energy_Change_Per: 97
     CardDispotal: 0
   PN: 1

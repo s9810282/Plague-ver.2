@@ -15,6 +15,7 @@ MonoBehaviour:
   cardName: "\uC4F0\uB808\uAE30\uB354\uBBF8 \uB4A4\uC9C0\uAE30"
   cardType: 1
   sprite: {fileID: 21300000, guid: 51e1553e89919f446b52ced6e680d66b, type: 3}
+  icon: {fileID: 21300000, guid: 7f8d32be4335e5e45b2174377a97e1c6, type: 3}
   cardAbility: "30% \uC57D\uD488 \uD68D\uB4DD\n50% \uC2A4\uD14C\uBBF8\uB098 -2"
   gain:
     Infection_Level_Variation: 0
@@ -27,9 +28,8 @@ MonoBehaviour:
     FoodPer: 0
   pain:
     Infection_Level_Variation: 0
-    Energy_Change_Volume: -2
+    Energy_Change_Volume: 2
     Infection_Lever_Per: 0
     Energy_Change_Per: 50
     CardDispotal: 0
-  icon: {fileID: 21300000, guid: 7f8d32be4335e5e45b2174377a97e1c6, type: 3}
   PN: 1

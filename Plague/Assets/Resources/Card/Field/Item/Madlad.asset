@@ -19,18 +19,18 @@ MonoBehaviour:
   cardAbility: "\uB79C\uB364\uCE74\uB4DC \uD55C\uC7A5 \uD3D0\uAE30\n\uAC10\uC5FC\uC218\uCE58
     +2\n\uC2A4\uD14C\uBBF8\uB098 -2"
   gain:
-    Infection_Level_Variation: 2
+    Infection_Level_Variation: 0
     Energy_Change_Volume: 0
-    Infection_Lever_Per: 100
-    Energy_Change_Per: 100
+    Infection_Lever_Per: 0
+    Energy_Change_Per: 0
     GetMedician: 0
     GetFood: 0
     MedicionPer: 0
     FoodPer: 0
   pain:
-    Infection_Level_Variation: 0
+    Infection_Level_Variation: 2
     Energy_Change_Volume: 2
-    Infection_Lever_Per: 0
-    Energy_Change_Per: 0
+    Infection_Lever_Per: 100
+    Energy_Change_Per: 100
     CardDispotal: 1
   PN: 0

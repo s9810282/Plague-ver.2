@@ -9,7 +9,6 @@ using DG.Tweening;
 public class TitleManager : MonoBehaviour
 {
     [SerializeField] Image fadeImage;
-    [SerializeField] CanvasGroup canvasGroup;
 
     void Awake()
     {

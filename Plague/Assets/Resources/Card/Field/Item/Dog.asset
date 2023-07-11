@@ -18,18 +18,18 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 9911de448f0e14f42a0c8b7473c46f3f, type: 3}
   cardAbility: "\uAC10\uC5FC\uC218\uCE58 +2"
   gain:
-    Infection_Level_Variation: 2
+    Infection_Level_Variation: 0
     Energy_Change_Volume: 0
-    Infection_Lever_Per: 100
+    Infection_Lever_Per: 0
     Energy_Change_Per: 0
     GetMedician: 0
     GetFood: 0
     MedicionPer: 0
     FoodPer: 0
   pain:
-    Infection_Level_Variation: 0
+    Infection_Level_Variation: 2
     Energy_Change_Volume: 0
-    Infection_Lever_Per: 0
+    Infection_Lever_Per: 100
     Energy_Change_Per: 0
     CardDispotal: 0
   PN: 0

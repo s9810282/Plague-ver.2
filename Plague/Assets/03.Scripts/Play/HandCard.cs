@@ -93,8 +93,8 @@ public class HandCard : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
             if (cardSetting != null)
                 cardSetting.Invoke(card, transform.position.x > limitPos.position.x);
 
-            Debug.Log(transform.position.x);
-            Debug.Log(limitPos.position.x);
+            //Debug.Log(transform.position.x);
+            //Debug.Log(limitPos.position.x);
         }
         else
             transform.position = startpos;

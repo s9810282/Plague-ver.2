@@ -19,4 +19,11 @@ public class GameData : ScriptableObject
     {
         
     }
+
+    public void Reset()
+    {
+        infection_Level = 0;
+        energy = 10;
+        days = 1;
+    }
 }

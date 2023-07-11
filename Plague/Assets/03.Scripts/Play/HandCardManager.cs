@@ -30,11 +30,18 @@ public class HandCardManager : MonoBehaviour
 
     [SerializeField] int handCardCount = 0;
 
+    [SerializeField] int maxCard = 7;
+
+    [SerializeField] int currentCard = 0;
+
+    [SerializeField] int roundAddtionCard = 2;
 
     [SerializeField] Transform handCardLimit;
 
     Action<BehaviorCard> leftSetting;
     Action<BehaviorCard> rightSetting;
+
+    
 
     //[Space(30f)]
 
@@ -50,10 +57,41 @@ public class HandCardManager : MonoBehaviour
 
             handCards[i].gameObject.SetActive(true);
         }
+
+        currentCard = handCardCount;
     }
 
-    public void RoundStart()
+    public void NextDay()
     {
+        int count = currentCard + roundAddtionCard;
+
+        if (count > maxCard)
+            count = maxCard;
+
+        for (int i = currentCard; i < currentCard + roundAddtionCard; i++)
+        {
+            handCards[i]._Card = cardsDatas[UnityEngine.Random.Range(0, cardsDatas.Length - 1)];
+
+            handCards[i].ShowSelctCard = showSelectCard;
+            handCards[i].SetCardData(SetFieldBehaviour);
+            handCards[i].SetLimitPos(handCardLimit);
+
+            handCards[i].gameObject.SetActive(true);
+        }
+    }
+
+    public void AddCard(int type)
+    {
+        //0 == Food, 1 == Medician
+
+    }
+
+    public void CardDisPotal(int count)
+    {
+        if (count == 0)
+            return;
+
+
 
     }
 
@@ -76,20 +114,4 @@ public class HandCardManager : MonoBehaviour
             rightSetting = _rightSetting;
     }
 
-
-
-    public void AddCard(int type)
-    {
-        //0 == Food, 1 == Medician
-
-    }
-
-    public void CardDisPotal(int count)
-    {
-        if (count == 0)
-            return;
-
-
-
-    }
 }
