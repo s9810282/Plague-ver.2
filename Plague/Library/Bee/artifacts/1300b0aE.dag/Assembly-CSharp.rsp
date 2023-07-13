@@ -363,6 +363,7 @@
 "Assets/03.Scripts/Play/GameData.cs"
 "Assets/03.Scripts/Play/HandCard.cs"
 "Assets/03.Scripts/Play/HandCardManager.cs"
+"Assets/03.Scripts/Play/UIManager.cs"
 "Assets/03.Scripts/TitleManager.cs"
 -langversion:9.0
 

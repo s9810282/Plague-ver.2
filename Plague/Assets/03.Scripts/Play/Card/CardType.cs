@@ -10,3 +10,12 @@ public enum CardType
     HandItem  = 10,
     HandPN,
 }
+
+public enum Ending
+{
+    None = 0,
+    Clear = 1,
+
+    Energy = 10,
+    Infection,
+}

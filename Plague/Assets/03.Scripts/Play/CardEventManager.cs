@@ -20,10 +20,6 @@ public class CardEventManager : MonoBehaviour
 
     [Space(30f)]
 
-    [SerializeField] Image fadeImage;
-    [SerializeField] Text fadeText;
-
-
 
     bool isOnlyIgnore = false;
     bool isInfectionIgnore = false;
@@ -34,8 +30,6 @@ public class CardEventManager : MonoBehaviour
 
     void Start()
     {
-        FadeDays();
-
         isOnlyIgnore = false;
         isInfectionIgnore = false;
 
@@ -54,10 +48,16 @@ public class CardEventManager : MonoBehaviour
     {
         handCardManager.EventSetting(fieldCardManager.SetFieldLeft, fieldCardManager.SetFieldRight);
     }
-
     public void CardSettingEnd()
     {
         ClosingFieldCard();
+
+        isOnlyIgnore = false;
+        isInfectionIgnore = false;
+
+        isPNNull = false;
+        isPN = true;
+
         gameData.CheckEnding();
     }
 
@@ -65,8 +65,6 @@ public class CardEventManager : MonoBehaviour
     {
         FieldCard[] fieldCard = fieldCardManager.ReturnSituationCards();
         FieldBehaviourCard[] behaviourCards = fieldCardManager.ReturnFieldBehaviourCards();
-
-        //처리 순서 조정 필요 효과 무시 카드를 후 순위에 둘 경우 적용 X
         
         BehaviourCardProcess(behaviourCards[0]._Card);
         BehaviourCardProcess(behaviourCards[1]._Card);
@@ -74,9 +72,10 @@ public class CardEventManager : MonoBehaviour
         SituationCardProcess(fieldCard[0]._Card);
         SituationCardProcess(fieldCard[1]._Card);
 
-
+        gameData.NomalizedData();
         gameData.Days += 1;
 
+        fieldCardManager.ResetField();
         handCardManager.NextDay();
     }
 
@@ -151,18 +150,6 @@ public class CardEventManager : MonoBehaviour
 
 
         handCardManager.CardDisPotal(situationCard.pain.CardDispotal);
-    }
-
-
-    public void DayModifyText()
-    {
-        fadeText.text = "DAYS - " + gameData.Days;
-    }
-
-    public void FadeDays()
-    {
-        fadeImage.DOFade(0, 2f).OnComplete(() => fadeImage.gameObject.SetActive(false));
-        fadeText.DOFade(0, 2f).OnComplete(() => fadeText.gameObject.SetActive(false));
     }
 }
 

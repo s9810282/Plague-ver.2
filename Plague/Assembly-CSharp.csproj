@@ -62,6 +62,7 @@
     <Compile Include="Assets\03.Scripts\Play\GameData.cs" />
     <Compile Include="Assets\03.Scripts\Play\Card\CardType.cs" />
     <Compile Include="Assets\03.Scripts\Play\HandCard.cs" />
+    <Compile Include="Assets\03.Scripts\Play\UIManager.cs" />
     <Compile Include="Assets\03.Scripts\IntroManager.cs" />
     <Compile Include="Assets\03.Scripts\Play\FieldCard.cs" />
     <Compile Include="Assets\03.Scripts\Play\FieldBehaviourCard.cs" />

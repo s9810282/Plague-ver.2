@@ -27,6 +27,20 @@ public class FieldCardManager : MonoBehaviour
         }
     }
 
+    public void ResetField()
+    {
+        for (int i = 0; i < 2; i++)
+        {
+            int dataNum = Random.Range(0, fieldCardDates.Length - 1);
+
+            fieldCards[i]._Card = fieldCardDates[dataNum];
+            fieldCards[i].SetCardData();
+        }
+
+        fieldBehaviourCards[0].gameObject.SetActive(false);
+        fieldBehaviourCards[1].gameObject.SetActive(false);
+    }
+
     public void SetFieldLeft(BehaviorCard behaviorCard = null)
     {
         fieldBehaviourCards[0]._Card = behaviorCard;
