@@ -42,3 +42,15 @@ Hand
     public bool OnlyIgnore; 모든 상황효과 무시 여부
 
     public bool PN;  긍정 / 부정
+
+
+
+
+
+    현재 진행도
+
+- Field Card 完
+- Hand Card
+- GameData 完
+- Days System 完
+- Ending

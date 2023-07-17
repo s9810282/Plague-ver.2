@@ -69,9 +69,9 @@
     <Compile Include="Assets\03.Scripts\TitleManager.cs" />
     <Compile Include="Assets\03.Scripts\Play\FieldCardManager.cs" />
     <Compile Include="Assets\03.Scripts\Play\Card\Card.cs" />
-    <Compile Include="Assets\03.Scripts\Play\CardEventManager.cs" />
     <Compile Include="Assets\03.Scripts\Play\Card\SituationCard.cs" />
     <Compile Include="Assets\03.Scripts\Play\HandCardManager.cs" />
+    <Compile Include="Assets\03.Scripts\Play\GameEventManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plague 카드 세팅 설정.txt" />
