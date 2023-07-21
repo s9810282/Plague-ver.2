@@ -24,17 +24,17 @@ public class HandCardManager : MonoBehaviour
 
     [SerializeField] BehaviorCard[] cardsDatas;
 
-    [SerializeField] HandCard[] handCards;
+    [SerializeField] List<HandCard> handCards;
 
     [SerializeField] HandCard showSelectCard;
 
-    [SerializeField] int handCardCount = 0;
-
-    [SerializeField] int maxCard = 7;
+    [SerializeField] int handCardCount = 0;  
 
     [SerializeField] int currentCard = 0;
 
     [SerializeField] int roundAddtionCard = 2;
+
+    [SerializeField] int dispotalCount = 0;
 
     [SerializeField] Transform handCardLimit;
 
@@ -61,12 +61,14 @@ public class HandCardManager : MonoBehaviour
         currentCard = handCardCount;
     }
 
-    public void NextDay()
+    public void NextDay() //왜 배열이야 시이발
     {
-        int count = currentCard + roundAddtionCard;
+        //현재카드 + 라운드 추가 카드개수 만큼 지급
+        //3 + 2 - 0/2 - 2
+        int count = currentCard + roundAddtionCard - dispotalCount;
 
-        if (count > maxCard)
-            count = maxCard;
+        if (count > handCards.Count)
+            count = handCards.Count;
 
         for (int i = currentCard; i < currentCard + roundAddtionCard; i++)
         {
@@ -78,11 +80,19 @@ public class HandCardManager : MonoBehaviour
 
             handCards[i].gameObject.SetActive(true);
         }
+
+        currentCard = count;
+
+
+
+        dispotalCount = 0;
     }
 
     public void AddCard(int type)
     {
         //0 == Food, 1 == Medician
+
+        //tl
 
     }
 
@@ -91,8 +101,7 @@ public class HandCardManager : MonoBehaviour
         if (count == 0)
             return;
 
-
-
+        dispotalCount = count;
     }
 
 
@@ -103,6 +112,7 @@ public class HandCardManager : MonoBehaviour
             leftSetting.Invoke(behaviorCard);
         else
             rightSetting.Invoke(behaviorCard);
+
     }
     public void EventSetting(Action<BehaviorCard> _leftSetting = null, 
         Action<BehaviorCard> _rightSetting = null)

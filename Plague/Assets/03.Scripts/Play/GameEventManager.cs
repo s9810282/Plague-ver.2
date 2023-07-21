@@ -61,7 +61,7 @@ public class GameEventManager : MonoBehaviour
         gameData.CheckEnding();
     }
 
-    public void ClosingFieldCard()
+    public void ClosingFieldCard() //fieldCard 초기화 로직 필요
     {
         FieldCard[] fieldCard = fieldCardManager.ReturnSituationCards();
         FieldBehaviourCard[] behaviourCards = fieldCardManager.ReturnFieldBehaviourCards();
@@ -82,6 +82,8 @@ public class GameEventManager : MonoBehaviour
 
     public void BehaviourCardProcess(BehaviorCard behaviorCard)
     {
+        if (behaviorCard == null)
+            return;
 
         if (behaviorCard.cardType == CardType.HandPN)
         {
@@ -101,6 +103,8 @@ public class GameEventManager : MonoBehaviour
     }
     public void SituationCardProcess(SituationCard situationCard)
     {
+        if (situationCard == null)
+            return;
 
         if (isOnlyIgnore)
             return;
