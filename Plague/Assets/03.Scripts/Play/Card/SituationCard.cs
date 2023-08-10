@@ -42,7 +42,6 @@ public struct PNPain
 }
 
 
-
 [CreateAssetMenu(fileName = "new Field SituationCard CardData", menuName = "Filed SituationCard Card Data", order = 2)]
 public class SituationCard : Card
 {
@@ -55,3 +54,5 @@ public class SituationCard : Card
     public bool PN;
 
 }
+
+

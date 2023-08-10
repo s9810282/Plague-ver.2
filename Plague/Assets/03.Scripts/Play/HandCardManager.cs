@@ -38,6 +38,7 @@ public class HandCardManager : MonoBehaviour
 
     [SerializeField] Transform handCardLimit;
 
+ 
     Action<BehaviorCard> leftSetting;
     Action<BehaviorCard> rightSetting;
 
@@ -47,21 +48,23 @@ public class HandCardManager : MonoBehaviour
 
     public void GameStart()
     {
-        for (int i = 0; i < handCardCount; i++)
-        {
-            handCards[i]._Card = cardsDatas[UnityEngine.Random.Range(0, cardsDatas.Length - 1)];
+        //for (int i = 0; i < handCardCount; i++)
+        //{
+        //    handCards[i]._Card = cardsDatas[UnityEngine.Random.Range(0, cardsDatas.Length - 1)];
 
-            handCards[i].ShowSelctCard = showSelectCard;
-            handCards[i].SetCardData(SetFieldBehaviour);
-            handCards[i].SetLimitPos(handCardLimit);
+        //    handCards[i].ShowSelctCard = showSelectCard;
+        //    handCards[i].SetCardData(SetFieldBehaviour);
+        //    handCards[i].SetLimitPos(handCardLimit);
 
-            handCards[i].gameObject.SetActive(true);
-        }
+        //    handCards[i].gameObject.SetActive(true);
+        //}
 
-        currentCard = handCardCount;
+        //currentCard = handCardCount;
+
+        StartCoroutine(GameStartCoroutine());
     }
 
-    public void NextDay() //왜 배열이야 시이발
+    public void NextDay()
     {
         //현재카드 + 라운드 추가 카드개수 만큼 지급
         //3 + 2 - 0/2 - 2
@@ -82,8 +85,6 @@ public class HandCardManager : MonoBehaviour
         }
 
         currentCard = count;
-
-
 
         dispotalCount = 0;
     }
@@ -124,4 +125,22 @@ public class HandCardManager : MonoBehaviour
             rightSetting = _rightSetting;
     }
 
+
+    IEnumerator GameStartCoroutine()
+    {
+        for (int i = 0; i < handCardCount; i++)
+        {
+            handCards[i]._Card = cardsDatas[UnityEngine.Random.Range(0, cardsDatas.Length - 1)];
+
+            handCards[i].ShowSelctCard = showSelectCard;
+            handCards[i].SetCardData(SetFieldBehaviour);
+            handCards[i].SetLimitPos(handCardLimit);
+
+            handCards[i].gameObject.SetActive(true);
+
+            yield return new WaitForSeconds(1.25f);    
+        }
+
+        currentCard = handCardCount;
+    }
 }

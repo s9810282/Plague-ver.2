@@ -54,3 +54,7 @@ Hand
 - GameData 完
 - Days System 完
 - Ending
+
+
+8/10
+HandCard 초기화에 따른 애니메이션 및 처리

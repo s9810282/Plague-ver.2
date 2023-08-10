@@ -13,3 +13,5 @@ public class Card : ScriptableObject
     [TextArea] public string cardAbility;
     
 }
+
+

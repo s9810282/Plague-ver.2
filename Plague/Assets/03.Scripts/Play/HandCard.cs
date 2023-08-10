@@ -18,6 +18,10 @@ public class HandCard : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
 
     [SerializeField] Text itemAbilityText;
 
+    [SerializeField] Transform parent;
+
+    [SerializeField] Animator anim;
+
     Action<BehaviorCard, bool> cardSetting;
 
     private BehaviorCard card;
@@ -31,6 +35,7 @@ public class HandCard : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
     bool isShowCard = false;
 
     Vector3 startpos;
+
 
     // Start is called before the first frame update
     void Start()
@@ -66,7 +71,15 @@ public class HandCard : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
     public void CardClear()
     {
         gameObject.SetActive(false);
+        anim.enabled = true;
     }
+
+    public void SetParent()
+    {
+        gameObject.transform.SetParent(parent.transform);
+        anim.enabled = false;
+    }
+
 
     public void SetLimitPos(Transform pos)
     {
@@ -78,12 +91,10 @@ public class HandCard : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
     {
         startpos = transform.position;
     }
-
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = eventData.position;
     }
-
     public void OnEndDrag(PointerEventData eventData)
     {
         if (transform.position.y > limitPos.position.y)
@@ -99,7 +110,6 @@ public class HandCard : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
         else
             transform.position = startpos;
     }
-
     public void OnPointerClick(PointerEventData eventData) //더블클릭 시 카드 확대
     {
         if (eventData.clickCount >= 2)
